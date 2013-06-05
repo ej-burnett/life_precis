@@ -1,0 +1,45 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+#wrapper{
+	width:860px;
+	height:800px;
+	margin:0px auto;
+}
+#header{
+	width:860px;
+	height:150px;
+	margin-top:20px;
+	margin-right:20px;
+	float:right;
+	border:1px solid orange;
+	padding-top:15px;
+}
+#login_form{
+	float:right;
+	width:300px;
+	height:25px;
+}
+#link{
+	float:right;
+	clear:both;
+	margin-right:25px;
+}
+#main_section{
+	width:800px;
+	height:600px;
+	/*border:1px solid red;*/
+	float:left;
+	text-align:center;
+	margin-left:50px;
+}
+img{
+	width:700px;
+	height:600px;
+	margin-left:50px;
+}
+#main_section h1{
+	font-size: 30px;
+	color:orange;
+}

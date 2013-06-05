@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" a href="home.css.scss">
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<%= simple_form_for(@user, :html => {:class => 'form-inline' }) do |f| %>
+  			<%= f.input :email_address %>
+  			<%= f.input :password %>
+  			<%= f.button :submit %>
+		<% end %>
+		<a id="link" href="/users/new">Not sharing your sketch yet? Create a LifePrecis here</a>
+	</div>
+	<div id="main_section">
+		<h1>Welcome to LifePrecis: Sharable life sketches</h1>
+		<img src="/images/textimg.jpg">
+	</div>
+</div>
+</body>
+</html>
