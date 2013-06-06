@@ -3,7 +3,11 @@
 
 <div id="wrapper">
     <h1>Coding Dojo April Bootcamp</h1>
-    <a id="logout" href="/">Logout</a>
+    <form id="logout" action="/signout/<%= @user %>" method="post">
+        <input class="btn btn-warning" type="submit" value="Logout" />
+        <input type="hidden" name="_method" value="delete" />
+    </form>
+    <!-- <a id="logout" href="/">Logout</a> -->
 
     <div class="tabbable tabs-left">
         <ul class="nav nav-tabs"><% @users.each do |user| %>
@@ -39,6 +43,9 @@
                     <tr>
                         <td class="row_label">Free-for-all</td>
                         <td><%= user.misc %></td>
+                    </tr>
+                    <tr>
+                        
                     </tr>
                 </table>
             </div>

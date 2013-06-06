@@ -9,7 +9,7 @@ Precis::Application.routes.draw do
   resources :notes
   resources :sessions
 
-  match '' => 'users#landing'
+  match '' => 'sessions#new'
   match "/signup", :to => 'users#new'
   match "/signin", :to => 'sessions#new'
   match "/signout", :to => 'sessions#destroy'

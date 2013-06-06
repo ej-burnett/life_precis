@@ -1,2 +1,25 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" a href="home.css.scss">
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<% if flash[:error] %>
+			<p><%= flash[:error] %></p>
+		<% end %>
+		<%= simple_form_for(:session, :url => sessions_path) do |f| %>
+  			<%= f.input :email_address %>
+  			<%= f.input :password %>
+  			<%= f.button :submit, value: "Login"%>
+		<% end %>
+		<a id="link" href="/users/new">Not sharing your sketch yet? Create a LifePrecis here</a>
+	</div>
+	<div id="main_section">
+		<h1>Welcome to LifePrecis: Shareable life sketches</h1>
+		<img src="/images/textimg.jpg">
+	</div>
+</div>
+</body>
+</html>
