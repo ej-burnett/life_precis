@@ -2,30 +2,55 @@
 	margin:0px;
 	padding:0px;
 }
+
 #wrapper{
 	width:860px;
 	height:800px;
 	margin:0px auto;
 }
+
 #header{
 	width:860px;
-	height:150px;
+	height:100px;
 	margin-top:20px;
 	margin-right:20px;
 	float:right;
-	border:1px solid orange;
 	padding-top:15px;
 }
+
+.simple_form input{
+	margin-left:10px;
+}
+
+.controls{
+/*	border:1px solid green;*/
+	float:left;
+	margin-left: 100px;
+}
+
+.simple_form div.boolean, .simple_form input[type='submit'], #login{
+  	margin-right: 20px;
+	float:right;
+	margin-left:0px;
+}
+
+.simple_form div.input #inputs{
+  margin-bottom: 10px;
+  float:right;
+}
+
 #login_form{
 	float:right;
 	width:300px;
 	height:25px;
 }
+
 #link{
 	float:right;
 	clear:both;
 	margin-right:25px;
 }
+
 #main_section{
 	width:800px;
 	height:600px;
@@ -34,11 +59,13 @@
 	text-align:center;
 	margin-left:50px;
 }
+
 img{
 	width:700px;
 	height:600px;
 	margin-left:50px;
 }
+
 #main_section h1{
 	font-size: 30px;
 	color:orange;

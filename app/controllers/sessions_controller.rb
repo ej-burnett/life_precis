@@ -4,9 +4,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-  	puts "here3"
-    puts params[:session][:email_address]
-    puts params[:session][:password]
+  	# puts "here3"
+   #  puts params[:session][:email_address]
+   #  puts params[:session][:password]
     @user = User.authenticate(params[:session][:email_address], params[:session][:password])
 
   	if @user.nil?
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
   		render :new
   	else
   		sign_in @user
-  		redirect_to @user
+  		redirect_to "/users"
   end
 end
 
