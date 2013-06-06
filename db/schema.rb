@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130605025346) do
+ActiveRecord::Schema.define(:version => 20130606013329) do
 
   create_table "notes", :force => true do |t|
     t.text     "description"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(:version => 20130605025346) do
     t.string   "password_confirmation"
     t.binary   "image3"
     t.binary   "image2"
+    t.string   "encrypted_password"
+    t.string   "salt"
   end
 
 end

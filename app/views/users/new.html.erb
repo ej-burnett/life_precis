@@ -63,8 +63,12 @@
       <%= f.label :password %><br />
       <%= f.text_field :password %>
     </div>
+     <div class="field">
+      <%= f.label :password_confirm %><br />
+      <%= f.password_field :password_confirmation %>
+    </div>
     <div class="actions">
-      <%= f.submit %>
+      <%= f.button :submit, value:"Create LifePrecis" %>
     </div>
   </div>
 <!--   <%= link_to 'Back', users_path %> -->

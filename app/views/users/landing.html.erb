@@ -1,15 +1,18 @@
 <html>
 <head>
-	<title></title>
+	<title>Login Page</title>
 	<link rel="stylesheet" type="text/css" a href="home.css.scss">
 </head>
 <body>
 <div id="wrapper">
 	<div id="header">
-		<%= simple_form_for(@user, :html => {:class => 'form-inline' }) do |f| %>
+		<% if flash[:error] %>
+			<p><%= flash[:error] %></p>
+		<% end %>
+		<%= simple_form_for(:session, :url => sessions_path) do |f| %>
   			<%= f.input :email_address %>
   			<%= f.input :password %>
-  			<%= f.button :submit %>
+  			<%= f.button :submit, value: "Login!"%>
 		<% end %>
 		<a id="link" href="/users/new">Not sharing your sketch yet? Create a LifePrecis here</a>
 	</div>
