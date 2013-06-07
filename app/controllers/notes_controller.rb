@@ -4,7 +4,7 @@ class NotesController < ApplicationController
 		@note = User.find(session[:user_id]).notes.new(params[:note])
 
 		if @note.save
-			render :json => @note
+			redirect_to users_path
 		end
 	end
 

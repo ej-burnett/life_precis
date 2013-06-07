@@ -42,11 +42,11 @@ tr td:first-child{
 
 .tab-content{
 	margin-right:none;
-	width:720px;
+	width:740px;
 	/*height:360px;*/
 	size:25px;
 	float:left;
-	margin-top:20px;
+	/*margin-top:20px;*/
 }
 .tab-content table{
 	float:left;
@@ -63,11 +63,9 @@ tr td:first-child{
 img{
 	width:100px;
 	height:100px;
-	margin:10px;
-	margin-left:10px;
+	margin-bottom:10px;
 	/*margin-top:30px;*/
 	float:left;
-	border:1px solid red;
 }
 .nav-tabs{
 	cursor: pointer;
@@ -85,7 +83,37 @@ tr{
 }
 textarea{
 	height:60px;
-	width:450px;
+	width:650px;
+	float:left;
+}
+#wrapper h4{
+	font-size:14px;
+}
+#enter_notes{
+	width:720px;
+	height:100px;
+/*	border:1px solid green;*/
+}
+blockquote p{
+	font-size:12px;
+	display:block;
+	/*float:left;*/
+}
+input{
+	clear:both;
+	float:right;
+	margin-right:55px;
+	display:block;
+	font-size: 15px;
+}
+/*input button{
+	width:40px;
+	height:20px;
+}*/
+#display_notes{
+	width:720px;
+	float:left;
+	margin-top:20px;
 }
 .clear{
 	clear:both;

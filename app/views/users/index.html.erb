@@ -10,7 +10,7 @@
     <!-- <a id="logout" href="/">Logout</a> -->
     <div class="tabbable tabs-left">
         <ul class="nav nav-tabs"><% @users.each do |user| %>
-            <li id="tab<%=user.id%>"><%= user.first_name %> <%= user.last_name %></li><% end %>
+            <li class="active"><li id="tab<%=user.id%>"><%= user.first_name %> <%= user.last_name %></li><% end %>
         </ul>
         <% @users.each do |user| %>
             <div class="tab-content" id="content<%= user.id %>">
@@ -50,19 +50,24 @@
                     <%= image_tag user.avatar3.url(:thumb) %>
                 </div>
                 <div class="clear"></div>
- <!--                <%= YAML::dump(user.notes) %> -->
+                <div id="enter_notes">
  <!-- start of notes form -->
-                <%= form_for [user,user.notes.new] do |form| %>
-                <%= form.text_area :description %>
-                <%= form.hidden_field :recipient_user_id, :value => user.id %>
-                <%= form.button :submit, value:"Save Note" %>
-                <% end %>
+                    <h4>Add notes to remember conversations</h4>
+                    <%= form_for [user,user.notes.new] do |form| %>
+                    <%= form.text_area :description %>
+                    <%= form.hidden_field :recipient_user_id, :value => user.id %>
+                    <%= form.submit "Save Note"%>
+                    <% end %>
+                </div>
+                <div id="display_notes"
 <!-- start of displaying notes for each user -->
-                <% user.notes.each do |note| %>
+                <% @current_user.notes.where("recipient_user_id = #{user.id}").each do |note| %>
                     <blockquote>
+                        <p><%= note.created_at.to_time.strftime("%d %b %Y") %>
                         <p><%= note.description %></p>
                     </blockquote>
                 <% end %>
+                </div>
             </div>   
         <% end %>
     </div> 

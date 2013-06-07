@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
   		render :new
   	else
   		sign_in @user
+      session[:user_id] = @user.id
   		redirect_to "/users"
   end
 end
