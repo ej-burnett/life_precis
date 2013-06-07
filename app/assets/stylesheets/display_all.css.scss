@@ -3,6 +3,10 @@
 	margin-right:20px;
 }
 
+#logout_button{
+	margin-right:10px;
+}
+
 .tabbable{
 	margin-left:30px;
 }
@@ -22,14 +26,17 @@
 .tab-content p{
 	font-weight: bold;
 }
+
 table .row_label{
 	font-style:bold;
 }
+
 table{
 	margin-top:10px;
-	width:580px;
+	width:560px;
 	/*border:1px solid black;*/
 }
+
 table tr{
 	height:40px;
 }
@@ -42,12 +49,13 @@ tr td:first-child{
 
 .tab-content{
 	margin-right:none;
-	width:740px;
+	width:720px;
 	/*height:360px;*/
 	size:25px;
 	float:left;
 	/*margin-top:20px;*/
 }
+
 .tab-content table{
 	float:left;
 }
@@ -60,6 +68,7 @@ tr td:first-child{
 /*	border:1px solid orange;*/
 	/*margin-left:50px;*/
 }
+
 img{
 	width:100px;
 	height:100px;
@@ -67,54 +76,65 @@ img{
 	/*margin-top:30px;*/
 	float:left;
 }
+
 .nav-tabs{
 	cursor: pointer;
 }
+
 h1{
 	color:grey;
 }
+
 tr{
 	border-top:1px dotted grey;
 }
 
 #logout{
 	float:right;
-	margin-left:10px;
+	margin-right:10px;
 }
+
 textarea{
 	height:60px;
-	width:650px;
+	width:615px;
 	float:left;
 }
+
 #wrapper h4{
 	font-size:14px;
 }
+
 #enter_notes{
 	width:720px;
 	height:100px;
 /*	border:1px solid green;*/
 }
+
 blockquote p{
 	font-size:12px;
 	display:block;
 	/*float:left;*/
 }
+
 input{
 	clear:both;
 	float:right;
-	margin-right:55px;
+	margin-right:90px;
 	display:block;
 	font-size: 15px;
 }
+
 /*input button{
 	width:40px;
 	height:20px;
 }*/
+
 #display_notes{
 	width:720px;
 	float:left;
 	margin-top:20px;
 }
+
 .clear{
 	clear:both;
 }

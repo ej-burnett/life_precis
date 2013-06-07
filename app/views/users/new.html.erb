@@ -5,7 +5,6 @@
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
       <ul>
       <% @user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -14,65 +13,56 @@
     </div>
   <% end %>
 <div id="wrapper">
-  <h1>Create your profile by answering a few quick questions.</h1>
+  <h1>  Create your profile by answering a few quick questions.</h1>
   <h3>To keep LifePrevis short and sweeet each field is limited to 200 characters.</h3>
   <div id="left_section">
     <h5>The really basic basics</h5>
     <div class="field">
-    <!--   <%= f.label :first_name, :label %><br /> -->
       <%= f.text_field :first_name, :placeholder=>"First Name", :label=>false %>
     </div>
     <div class="field">
-<!--       <%= f.label :last_name %><br /> -->
       <%= f.text_field :last_name, :placeholder=>"Last Name", :label=>false %>
     </div>
-    <h5>Places</h5>
-    <div class="field">
-   <!--    <%= f.label :born %><br /> -->
-      <%= f.text_field :born, :placeholder=>"Where were you born?", :label=>false%>
-    </div>
-    <div class="field">
-  <!--     <%= f.label :live_now %><br /> -->
-      <%= f.text_field :live_now, :placeholder=>"Where do you live now (city/state)?", :label=>false %>
-    </div>
-    <div class="field">
-    <!--   <%= f.label :live_past %><br /> -->
-      <%= f.text_field :live_past, :placeholder=>"Where else have you lived?", :label=>false %>
+    <div id="places">
+      <h5>Places</h5>
+      <div class="field">
+        <%= f.text_field :born, :placeholder=>"Where were you born?", :label=>false%>
+      </div>
+      <div class="field">
+        <%= f.text_field :live_now, :placeholder=>"Where do you live now (city/state)?", :label=>false %>
+      </div>
+      <div class="field">
+        <%= f.text_field :live_past, :placeholder=>"Where else have you lived?", :label=>false %>
+      </div>
     </div>
     <h5>Where'd you learn and work?</h5>
     <div class="field">
- <!--      <%= f.label :school %><br /> -->
       <%= f.text_field :school, :placeholder=>"Where did you go to school/learn your skills?", :label=>false %>
     </div>
     <div class="field">
-<!--       <%= f.label :career %><br /> -->
       <%= f.text_field :career, :placeholder=>"What have you done for work?", :label=>false %>
     </div>
     <h5>The fun stuff</h5>
     <div class="field">
-<!--       <%= f.label :hobbies %><br /> -->
       <%= f.text_field :hobbies, :placeholder=>"What are a few of your hobbies?", :label=>false %>
     </div>
     <div class="field">
-     <!--  <%= f.label :misc %><br /> -->
       <%= f.text_field :misc, :placeholder=>"Misc: goals, family, favorite things?", :label=>false %>
     </div>
   </div>
   <div id="right_section">
     <h5>The usual login info</h5>
     <div class="field">
-    <!--   <%= f.label :email_address %><br /> -->
       <%= f.text_field :email_address, :placeholder=>"Email Address", :label=>false %>
     </div>
     <div class="field">
-<!--       <%= f.label :password %><br /> -->
       <%= f.password_field :password, :placeholder=>"Password", :label=>false %>
     </div>
      <div class="field">
-<!--       <%= f.label :password_confirm %><br /> -->
       <%= f.password_field :password_confirmation, :placeholder=>"Confirm Password", :label=>false %>
     </div>
     <div id="images">
+    <h5>Add a couple images - past or current, it's up to you.</h5>
       <div class="field">
         <%= f.label :avatar1, "Image 1" %><br />
         <%= f.file_field :avatar1 %>
@@ -87,13 +77,12 @@
       </div>
     </div>
     <div class="actions">
-      <%= f.button class="btn btn-danger", :submit, value:"Create LifePrecis" %>
+      <%= f.button :submit, value:"Create LifePrecis" %>
     </div>
   </div>
 <!--   <%= link_to 'Back', users_path %> -->
 </div>
 <% end %>
-
 
 <%= render 'form' %>
 

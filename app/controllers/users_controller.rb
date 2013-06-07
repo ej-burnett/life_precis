@@ -7,6 +7,8 @@ class UsersController < ApplicationController
   end
 
   def index
+
+    puts session[:user_id]
     @users = User.all
     @current_user = User.find(session[:user_id])
     respond_to do |format|
@@ -49,7 +51,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to action: "index", notice: 'User was successfully created.' }
+        format.html { redirect_to signin_path, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
 
       else

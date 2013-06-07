@@ -3,8 +3,9 @@
 
 <div id="wrapper">
     <h1>Coding Dojo April Bootcamp</h1>
+    
     <form id="logout" action="/signout/<%= @user %>" method="post">
-        <input class="btn btn-warning" type="submit" value="Logout" />
+        <input id="logout_button" class="btn btn-warning" type="submit" value="Logout" />
         <input type="hidden" name="_method" value="delete" />
     </form>
     <!-- <a id="logout" href="/">Logout</a> -->

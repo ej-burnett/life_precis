@@ -23,7 +23,7 @@ end
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 2.3.1.3'
 gem 'compass-rails'
-gem 'rails-footnotes', '>= 3.7.9', :group => :development
+# gem 'rails-footnotes', '>= 3.7.9', :group => :development
 
 gem 'hirb'
 gem 'simple_form'

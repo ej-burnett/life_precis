@@ -12,7 +12,7 @@
 		<%= simple_form_for(:session, :url => sessions_path) do |f| %>
   			<%= f.input :email_address, :placeholder=>"Email Address", :label=>false, :class=>"inputs" %>
   			<%= f.input :password, :placeholder=>"Password", :label=>false, :class=>"inputs" %>
-  			<%= f.button :submit, value: "Login", :id => "login" %>
+  			<%= f.button :submit, value:"Login", :id => "login" %>
 		<% end %>
 		<a id="link" href="/users/new">Not sharing your sketch yet? Create a LifePrecis here</a>
 	</div>
