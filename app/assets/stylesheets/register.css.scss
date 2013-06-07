@@ -6,33 +6,46 @@
 }
 
 #left_section{
-	width:440px;
+	width:420px;
 	height:700px;
 	float:left;
+	margin-left:50px;
 }
-	.area textarea{
-		width:200px;
-		height:30px;
-	}
 
-.field text_field{
-	width:5px;
-}
 #right_section{
-	width:440px;
+	width:420px;
 	height:700px;
 	float:right;
 }
-h1{
+#wrapper h1{
 	font-size:30px;
 	color:grey;
 	text-align: center;
 	/*margin-bottom:20px;*/
 }
-h3{
+#wrapper h3{
 	font-size:20px;
 	color:orange;
 	text-align: center;
+}
+#wrapper h5{
+	font-style: italic;
+}
+#images{
+
+}
+.field input{
+/*	background-color:red;*/
+	width:320px;
+}
+#images label{
+	margin-left:0px;
+	font-weight:bold;
+/*	height:30px;*/
+	/*vertical-align: center;*/
+}
+#images input{
+	width:200px;
 }
 .actions{
 	margin-top:15px;

@@ -1,5 +1,5 @@
 
-<%= stylesheet_link_tag 'register' %>
+
 
 <%= simple_form_for(@user, :html => {:class => 'form-vertical' }) do |f| %>
   <% if @user.errors.any? %>
@@ -17,55 +17,74 @@
   <h1>Create your profile by answering a few quick questions.</h1>
   <h3>To keep LifePrevis short and sweeet each field is limited to 200 characters.</h3>
   <div id="left_section">
+    <h5>The really basic basics</h5>
     <div class="field">
-      <%= f.label :first_name %><br />
-      <%= f.text_field :first_name %>
-    </div>
-    <div class="field">
-      <%= f.label :last_name %><br />
-      <%= f.text_field :last_name %>
+    <!--   <%= f.label :first_name, :label %><br /> -->
+      <%= f.text_field :first_name, :placeholder=>"First Name", :label=>false %>
     </div>
     <div class="field">
-      <%= f.label :born %><br />
-      <%= f.text_field :born %>
+<!--       <%= f.label :last_name %><br /> -->
+      <%= f.text_field :last_name, :placeholder=>"Last Name", :label=>false %>
+    </div>
+    <h5>Places</h5>
+    <div class="field">
+   <!--    <%= f.label :born %><br /> -->
+      <%= f.text_field :born, :placeholder=>"Where were you born?", :label=>false%>
     </div>
     <div class="field">
-      <%= f.label :live_now %><br />
-      <%= f.text_field :live_now %>
+  <!--     <%= f.label :live_now %><br /> -->
+      <%= f.text_field :live_now, :placeholder=>"Where do you live now (city/state)?", :label=>false %>
     </div>
-    <div class="area">
-      <%= f.label :live_past %><br />
-      <%= f.text_area :live_past %>
+    <div class="field">
+    <!--   <%= f.label :live_past %><br /> -->
+      <%= f.text_field :live_past, :placeholder=>"Where else have you lived?", :label=>false %>
     </div>
-    <div class="area">
-      <%= f.label :school %><br />
-      <%= f.text_area :school %>
+    <h5>Where'd you learn and work?</h5>
+    <div class="field">
+ <!--      <%= f.label :school %><br /> -->
+      <%= f.text_field :school, :placeholder=>"Where did you go to school/learn your skills?", :label=>false %>
     </div>
-    <div class="area">
-      <%= f.label :career %><br />
-      <%= f.text_area :career %>
+    <div class="field">
+<!--       <%= f.label :career %><br /> -->
+      <%= f.text_field :career, :placeholder=>"What have you done for work?", :label=>false %>
     </div>
-    <div class="area">
-      <%= f.label :hobbies %><br />
-      <%= f.text_area :hobbies %>
+    <h5>The fun stuff</h5>
+    <div class="field">
+<!--       <%= f.label :hobbies %><br /> -->
+      <%= f.text_field :hobbies, :placeholder=>"What are a few of your hobbies?", :label=>false %>
     </div>
-    <div class="area">
-      <%= f.label :misc %><br />
-      <%= f.text_area :misc %>
+    <div class="field">
+     <!--  <%= f.label :misc %><br /> -->
+      <%= f.text_field :misc, :placeholder=>"Misc: goals, family, favorite things?", :label=>false %>
     </div>
   </div>
   <div id="right_section">
+    <h5>The usual login info</h5>
     <div class="field">
-      <%= f.label :email_address %><br />
-      <%= f.text_field :email_address %>
+    <!--   <%= f.label :email_address %><br /> -->
+      <%= f.text_field :email_address, :placeholder=>"Email Address", :label=>false %>
     </div>
     <div class="field">
-      <%= f.label :password %><br />
-      <%= f.text_field :password %>
+<!--       <%= f.label :password %><br /> -->
+      <%= f.password_field :password, :placeholder=>"Password", :label=>false %>
     </div>
      <div class="field">
-      <%= f.label :password_confirm %><br />
-      <%= f.password_field :password_confirmation %>
+<!--       <%= f.label :password_confirm %><br /> -->
+      <%= f.password_field :password_confirmation, :placeholder=>"Confirm Password", :label=>false %>
+    </div>
+    <div id="images">
+      <div class="field">
+        <%= f.label :avatar1, "Image 1" %><br />
+        <%= f.file_field :avatar1 %>
+      </div>
+      <div class="field">
+        <%= f.label :avatar2, "Image 2" %><br />
+        <%= f.file_field :avatar2 %>
+      </div>
+      <div class="field">
+        <%= f.label :avatar3, "Image 3" %><br />
+        <%= f.file_field :avatar3 %>
+      </div>
     </div>
     <div class="actions">
       <%= f.button :submit, value:"Create LifePrecis" %>

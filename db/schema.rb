@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130606013329) do
+ActiveRecord::Schema.define(:version => 20130607003308) do
 
   create_table "notes", :force => true do |t|
     t.text     "description"
     t.integer  "user_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "recipient_user_id"
   end
 
   add_index "notes", ["user_id"], :name => "index_notes_on_user_id"
@@ -42,6 +43,18 @@ ActiveRecord::Schema.define(:version => 20130606013329) do
     t.binary   "image2"
     t.string   "encrypted_password"
     t.string   "salt"
+    t.string   "avatar1_file_name"
+    t.string   "avatar1_content_type"
+    t.integer  "avatar1_file_size"
+    t.datetime "avatar1_updated_at"
+    t.string   "avatar2_file_name"
+    t.string   "avatar2_content_type"
+    t.integer  "avatar2_file_size"
+    t.datetime "avatar2_updated_at"
+    t.string   "avatar3_file_name"
+    t.string   "avatar3_content_type"
+    t.integer  "avatar3_file_size"
+    t.datetime "avatar3_updated_at"
   end
 
 end

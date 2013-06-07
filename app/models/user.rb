@@ -1,7 +1,11 @@
 class User < ActiveRecord::Base
 	#attr_accessor is a virtual variable
   attr_accessor :password
-  attr_accessible :born, :career, :email_address, :first_name, :hobbies, :last_name, :live_now, :live_past, :misc, :password, :school, :salt, :encrypted_password, :password_confirmation
+  attr_accessible :born, :career, :email_address, :first_name, :hobbies, :last_name, :live_now, :live_past, :misc, :password, :school, :salt, :encrypted_password, :password_confirmation, :avatar1, :avatar2, :avatar3
+has_many :notes
+has_attached_file :avatar1, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+has_attached_file :avatar2, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+has_attached_file :avatar3, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
 email_regex = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]+)\z/i
 
@@ -23,7 +27,9 @@ email_regex = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]+)\z/i
   	encrypted_password == encrypt(submitted_password)
   end
 
+  def has_attached_file
 
+  end
   # class method that checks whether the user's email and submitted_password are valid
   def self.authenticate(email, submitted_password)
   	user = find_by_email(email)

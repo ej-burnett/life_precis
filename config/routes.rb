@@ -5,8 +5,9 @@ Precis::Application.routes.draw do
 
   get "sessions/destroy"
 
-  resources :users
-  resources :notes
+  resources :users do
+    resources :notes, :only => [:index, :create]
+  end
   resources :sessions
 
   match '' => 'sessions#new'

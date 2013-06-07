@@ -28,7 +28,7 @@ gem 'rails-footnotes', '>= 3.7.9', :group => :development
 gem 'hirb'
 gem 'simple_form'
 
-gem 'carrierwave'
+gem "paperclip", "~> 3.0"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

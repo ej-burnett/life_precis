@@ -8,7 +8,6 @@
         <input type="hidden" name="_method" value="delete" />
     </form>
     <!-- <a id="logout" href="/">Logout</a> -->
-
     <div class="tabbable tabs-left">
         <ul class="nav nav-tabs"><% @users.each do |user| %>
             <li id="tab<%=user.id%>"><%= user.first_name %> <%= user.last_name %></li><% end %>
@@ -44,20 +43,29 @@
                         <td class="row_label">Free-for-all</td>
                         <td><%= user.misc %></td>
                     </tr>
-                    <tr>
-                        
-                    </tr>
                 </table>
-            </div>
+                <div id="images">
+                    <%= image_tag user.avatar1.url(:thumb) %>
+                    <%= image_tag user.avatar2.url(:thumb) %>
+                    <%= image_tag user.avatar3.url(:thumb) %>
+                </div>
+                <div class="clear"></div>
+ <!--                <%= YAML::dump(user.notes) %> -->
+ <!-- start of notes form -->
+                <%= form_for [user,user.notes.new] do |form| %>
+                <%= form.text_area :description %>
+                <%= form.hidden_field :recipient_user_id, :value => user.id %>
+                <%= form.button :submit, value:"Save Note" %>
+                <% end %>
+<!-- start of displaying notes for each user -->
+                <% user.notes.each do |note| %>
+                    <blockquote>
+                        <p><%= note.description %></p>
+                    </blockquote>
+                <% end %>
+            </div>   
         <% end %>
-     <div id="images">
-        <img src="/images/hiking.jpg" alternate="hiking">
-        <img src="/images/kidimg.jpg" alternate="kid">
-        <img src="/images/superimg.jpg" alternate="super">
     </div> 
-    </div>
-    
-
     <br />
 
  <!--    <%= link_to 'New User', new_user_path, :class=>"btn btn-danger" %> -->
